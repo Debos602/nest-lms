@@ -29,4 +29,7 @@ export class UserService {
         throw new Error('Error creating user');
     }
     }
+    async getUserById(id: string) {
+        return await this.userModel.findOne({ _id: id }).exec();
+    }   
 }

@@ -14,4 +14,6 @@ export class RegisterDto {
 
     @IsString()
     password: string;
+    role?: string;
+
 }    

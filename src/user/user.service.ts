@@ -17,7 +17,8 @@ export class UserService {
             fname: registerUserDto.fname,
             lname: registerUserDto.lname,
             email: registerUserDto.email,
-            password: registerUserDto.password
+            password: registerUserDto.password,
+            role: registerUserDto.role 
         });
      }catch(error: unknown) {
         console.error('Error creating user:', error);

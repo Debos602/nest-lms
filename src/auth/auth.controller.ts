@@ -28,6 +28,6 @@ export class AuthController {
        const userId = req.user.sub; // Access the user ID from the JWT payload
        const user = await this.userService.getUserById(userId);
        console.log("profile-controller", user);
-       return user;
+       return {id:user?._id, fname: user?.fname, lname: user?.lname, email:user?.email}; // Exclude the password from the response
     }
 }
